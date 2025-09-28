@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>openYourRadio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.png">
+</head>
+<body>
+<p align=center><br>
+  <a href="https://github.com/Lolo280374/openYourRadio" title="hackatime stats"><img src="https://hackatime-badge.hackclub.com/U09CBF0DS4F/openYourRadio" title="hackatime stats"></a>
+  <a href="http://makeapullrequest.com" title="PRs are welcome"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" title="PRs are welcome"></a>
+  <a href="#npm-linux-macos-windows" title="works on linux"><img src="https://img.shields.io/badge/os-linux-brightgreen" title="works on linux"></a>
+  <a href="#npm-linux-macos-windows" title="works on macOS"><img src="https://img.shields.io/badge/os-mac-brightgreen" title="works on macOS"></a>
+  <a href="#npm-linux-macos-windows" title="works on Windows"><img src="https://img.shields.io/badge/os-windows-brightgreen" title="works on Windows"></a>
+<br></p>
+<header>
+  <h1>openYourRadio</h1>
+  <p>grab your favorite player, your fav station picks, and let's get tuned in! free and forever!<br>this tool gathers data from the <a href="https://www.radio-browser.info/">RadioBrowser API</a>.</p>
+</header>
+<main>
+  <p align="center"><a href="https://github.com/Lolo280374/openYourRadio">check out the GitHub</a> - <a href="https://www.npmjs.com/package/openyourradio">check out on npm (package manager)</a></p>
+  <section class="showcase">
+    <h2>showcase</h2>
+    <video controls>
+      <source src="https://github.com/user-attachments/assets/90a97593-eda3-4d0c-94f3-56c01d697075" type="video/mp4">
+      what browser are you using? looks like the video can't load...
+    </video>
+    <video controls>
+      <source src="https://github.com/user-attachments/assets/f23639af-1c61-401b-97bc-a264d509589d" type="video/mp4">
+      what browser are you using? looks like the video can't load...
+    </video>
+  </section>
+  <section>
+    <h2>compatible players</h2>
+    <ul>
+      <li><b>mpv</b> (Windows, macOS, Linux)</li>
+      <li><b>VLC Media Player</b> (Windows, macOS, Linux)</li>
+      <li><b>Windows Media Player (Legacy)</b> (Windows)</li>
+      <li><b>QuickTime Player</b> (macOS)</li>
+      <li>web browsers are only used as a fallback method in case none of the following can be opened.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>dependencies</h2>
+    <ul>
+      <li><b>NodeJS</b> (<a href="https://nodejs.org/en/download">install here</a>)</li>
+      <li><b>the npm package manager</b> (should be built in with nodeJS)</li>
+      <li><b>git</b> (only if you plan on installing from source)</li>
+    </ul>
+  </section>
+  <section>
+    <h2>quick installation with npm</h2>
+    <pre>
+      npm install -g openYourRadio
+      radio -V
+      > 1.0.0
+    </pre>
+    you're good to go!
+    <h2>manual installation from source</h2>
+    <pre>
+      git clone https://github.com/Lolo280374/openYourRadio.git
+      cd openYourRadio
+      npm install
+      npm init
+      radio -V
+      > 1.0.0
+    </pre>
+    you're good to go! you can now get editing, or anything else you wanted to do from source!
+  </section>
+  <section>
+  <h2>the (full) list of commands</h2>
+  <p>i'm aware this might look overwhelming!! make sure to check the GitHub for more better layed-out information</p>
+  <h3>playback</h3>
+  <ul>
+    <li><b>radio search &lt;query&gt;</b> : search for a specific radio on the API. Returns the 5 most accurate results.</li>
+    <li><b>radio play &lt;query/ID/random&gt; [--genre, --country, --player]</b> : play a specific radio, either by query, ID being the # from the search list, or 'random' for a random radio from the API. You may also specify <i>--genre</i> (e.g., "j-pop") and/or <i>--country</i> (e.g., "France") to filter randomized results. You can also force a specific player using <i>--player "x"</i>. See compatible players above.</li>
+    <li><b>radio stop</b> : stops the current playback and closes the player (useful if using mpv, which is headless).</li>
+  </ul>
+  <h3>favorites</h3>
+  <ul>
+    <li><b>radio fav add &lt;query/ID&gt;</b> : adds a station to your favorites list. Query = search term (e.g., BBC RADIO 1), ID = # from the last search list.</li>
+    <li><b>radio fav delete &lt;name/ID&gt;</b> : deletes a station from your favorites list. Name = exact radio name, ID = # from your favorites list.</li>
+    <li><b>radio fav list</b> : lists all your favorited stations.</li>
+    <li><b>radio fav play &lt;name/ID/random&gt; [--player vlc]</b> : play a station from your favorites by name, ID, or randomly. Optionally force a specific player using <i>--player</i>.</li>
+    <li><b>radio fav export</b> : opens the favorites file JSON in your system default editor (Notepad, TextEdit, or nano).</li>
+  </ul>
+  <h3>quality of life</h3>
+  <ul>
+    <li><b>radio history [n]</b> : display your playback history. <i>n</i> = number of entries to show (default 5).</li>
+    <li><b>radio list &lt;genres/countries&gt;</b> : displays the list of genres or countries supported by the Radio Browser API.</li>
+    <li><b>radio help</b> : show the help screen with a list of commands.</li>
+  </ul>
+  </section>
+  <section>
+    <h2>privacy statement</h2>
+    <p>this tool doesn't collect analytics of any sort. all it does is fetch radio info and URLs from the Radio Browser API. check out <a href="https://www.radio-browser.info/faq">their privacy statement for more information</a>.</p>
+  </section>
+  <section>
+    <h2>license</h2>
+    <p>MIT license. <a href="https://github.com/Lolo280374/openYourRadio/blob/main/LICENSE/">check the GitHub for more details</a>.</p>
+  </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+header h1 {
+  margin: 0.5rem 0;
+}
+header p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+h2 {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.3rem;
+  margin-top: 2rem;
+}
+pre {
+  background: #eee;
+  padding: 1rem;
+  overflow-x: auto;
+}
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+video {
+  width: 100%;
+  max-width: 800px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
